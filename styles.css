@@ -5,27 +5,41 @@ body {
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
-  padding: 20px;
+  padding: 0;
 }
 
 header {
-  text-align: center;
-  padding: 30px;
   background: #004466;
   color: white;
-  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
 }
 
-header nav a {
-  margin: 0 10px;
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-section { margin: 40px 0; }
+nav a:hover {
+  text-decoration: underline;
+}
 
-h2 { color: #004466; margin-bottom: 15px; }
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #004466;
+  margin-bottom: 20px;
+}
 
 .card, .project-card {
   background: white;
@@ -42,7 +56,9 @@ h2 { color: #004466; margin-bottom: 15px; }
 }
 
 footer {
+  background: #004466;
+  color: white;
   text-align: center;
+  padding: 10px;
   margin-top: 40px;
-  color: #777;
 }
