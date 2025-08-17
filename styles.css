@@ -2,40 +2,41 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #004466, #0099cc, #66d9ff);
+  background: linear-gradient(135deg, skyblue, white);
   color: #fff;
   line-height: 1.6;
 }
 
 header {
-  background: rgba(0,0,0,0.5);
-  padding: 20px;
-  text-align: center;
-  position: sticky;
+  position: fixed;
+  right: 0;
   top: 0;
+  height: 100%;
+  width: 180px;   /* sidebar width */
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 nav a {
-  margin: 0 15px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  position: relative;
   transition: color 0.3s;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: -4px;
-  width: 0%; height: 2px;
-  background: #66d9ff;
-  transition: width 0.3s;
+nav a:hover {
+  color: #66d9ff;
 }
-
-nav a:hover { color: #66d9ff; }
-nav a:hover::after { width: 100%; }
 
 .hero {
   text-align: center;
@@ -43,10 +44,12 @@ nav a:hover::after { width: 100%; }
 }
 
 .hero img {
-  max-width: 250px;
+  width: 80%;         /* makes it stretch most of the screen width */
+  max-width: 900px;   /* don’t let it become too huge */
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
+
 
 .hero h1 {
   font-size: 2.5rem;
@@ -104,4 +107,9 @@ footer {
   padding: 15px;
   color: #eee;
   margin-top: 40px;
+}
+
+
+main, section, footer {
+  margin-right: 200px;  /* push content away from sidebar */
 }
